@@ -1,0 +1,19 @@
+{
+    "name": "baranozdemir/php-structure",
+    "description": "PHP Structure",
+    "authors": [
+        {
+            "name": "Baran Özdemir",
+            "email": "info@baranozdemir.com"
+        }
+    ],
+    "require": {
+        "izniburak/router": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "./App",
+            "Core\\": "./Core"
+        }
+    }
+}
