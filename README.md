@@ -2,6 +2,13 @@
 
 - [x] Route Structure
 - [ ] Template Engine
+- [ ] Validation
+- [ ] Show Error Detail
+- [ ] Global Settings
+- [ ] Database
+- [ ] Date Operations
+- [ ] Auth
+- [ ] File and Pictures Upload
 
 Note: Not finished, yet.
 
@@ -34,3 +41,4 @@ That's it! You can now create a database and write code!
 - [x] for Date Operations --> [briannesbitt/Carbon](https://github.com/briannesbitt/Carbon)
 - [x] for Auth --> [auraphp/Aura.Session](https://github.com/auraphp/Aura.Session)
 - [x] for File and Pictures Upload --> [verot/class.upload.php](https://packagist.org/packages/verot/class.upload.php)
+

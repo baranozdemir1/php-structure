@@ -1,7 +1,6 @@
 <?php
-use Buki\Router\Router;
 
-$app = new \Core\Bootstrap();
+global $app;
 
 $app->router->controller('/', 'Home');
 
