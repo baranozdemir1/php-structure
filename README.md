@@ -4,7 +4,7 @@
 - [x] Template Engine
 - [x] Form Validation
 - [x] Show Error Detail
-- [ ] Global Settings
+- [x] .env Global Settings
 - [ ] Database
 - [ ] Date Operations
 - [ ] Auth
@@ -26,7 +26,7 @@ You can then install the packages.
 composer install
 ```
 
-Replace `.env.example.php` with `.env.php` and configure your own settings.
+Replace `.env.example` with `.env` and configure your settings.
 
 That's it! You can now create a database and write code!
 
@@ -36,7 +36,7 @@ That's it! You can now create a database and write code!
 - [x] for Template Engine --> [jenssegers/blade](https://github.com/jenssegers/blade)
 - [x] for Form Validation --> [vlucas/valitron](https://github.com/vlucas/valitron)
 - [x] for Show Error Detail --> [filp/whoops](https://github.com/filp/whoops)
-- [x] for Global Settings --> [arrilot/dotenv-php](https://github.com/arrilot/dotenv-php)
+- [x] for .env Global Settings --> [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv)
 - [x] for Database --> [illuminate/database](https://github.com/illuminate/database)
 - [x] for Date Operations --> [briannesbitt/Carbon](https://github.com/briannesbitt/Carbon)
 - [x] for Auth --> [auraphp/Aura.Session](https://github.com/auraphp/Aura.Session)

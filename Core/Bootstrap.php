@@ -3,7 +3,10 @@
 namespace Core;
 
 use Buki\Router\Router;
+use Dotenv\Dotenv;
 use Valitron\Validator;
+use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
 
 class Bootstrap
 {
@@ -13,6 +16,24 @@ class Bootstrap
 
     public function __construct()
     {
+        $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+        $dotenv->load();
+        $variables = [
+            'APP_DEBUG',
+            'DB_HOST',
+            'DB_NAME',
+            'DB_USER',
+            'DB_PASS'
+        ];
+        $dotenv->required($variables);
+
+
+        $whoops = new Run();
+        $whoops->pushHandler(new PrettyPageHandler());
+        if ( config('APP_DEBUG') === "true" ){
+            $whoops->register();
+        }
+
         $this->router = new Router([
             'paths' => [
                 'controllers' => 'App/Controllers',
@@ -33,5 +54,6 @@ class Bootstrap
     {
         $this->router->run();
     }
+
 
 }
