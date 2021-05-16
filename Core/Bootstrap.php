@@ -4,6 +4,7 @@ namespace Core;
 
 use Buki\Router\Router;
 use Dotenv\Dotenv;
+use Illuminate\Database\Capsule\Manager as Capsule;
 use Valitron\Validator;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
@@ -16,6 +17,9 @@ class Bootstrap
 
     public function __construct()
     {
+        /*
+         * .env install
+         */
         $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
         $dotenv->load();
         $variables = [
@@ -27,12 +31,33 @@ class Bootstrap
         ];
         $dotenv->required($variables);
 
-
+        /*
+         * error reporting install
+         */
         $whoops = new Run();
         $whoops->pushHandler(new PrettyPageHandler());
         if ( config('APP_DEBUG') === "true" ){
             $whoops->register();
         }
+
+        /*
+         * database install
+         */
+
+        $capsule = new Capsule();
+        $capsule->addConnection([
+            'driver'    => config('DB_DRIVER'),
+            'host'      => config('DB_HOST'),
+            'database'  => config('DB_NAME'),
+            'username'  => config('DB_USER'),
+            'password'  => config('DB_PASS'),
+            'charset'   => config('DB_CHARSET'),
+            'collation' => config('DB_COLLATION'),
+            'prefix'    => config('DB_PREFIX')
+        ]);
+
+        $capsule->setAsGlobal();
+        $capsule->bootEloquent();
 
         $this->router = new Router([
             'paths' => [

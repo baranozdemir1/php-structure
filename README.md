@@ -5,12 +5,17 @@
 - [x] Form Validation
 - [x] Show Error Detail
 - [x] .env Global Settings
-- [ ] Database
+- [x] Database
 - [ ] Date Operations
 - [ ] Auth
 - [ ] File and Pictures Upload
 
 Note: Not finished, yet.
+
+[![Latest Stable Version](https://poser.pugx.org/baranozdemir/php-structure/v)](//packagist.org/packages/baranozdemir/php-structure)
+[![Total Downloads](https://poser.pugx.org/baranozdemir/php-structure/downloads)](//packagist.org/packages/baranozdemir/php-structure)
+[![Latest Unstable Version](https://poser.pugx.org/baranozdemir/php-structure/v/unstable)](//packagist.org/packages/baranozdemir/php-structure)
+[![License](https://poser.pugx.org/baranozdemir/php-structure/license)](//packagist.org/packages/baranozdemir/php-structure)
 
 ## Setup
 

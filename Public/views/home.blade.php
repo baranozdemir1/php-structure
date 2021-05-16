@@ -3,7 +3,7 @@
 @section('title', 'HomePage')
 
 @section('content')
-    <form action="" method="post">
+    <form action="" style="display: none" method="post">
         <ul>
             <li>
                 <input type="text" value="@getData('username')" class="@hasError('username')" placeholder="Username" name="username">
@@ -20,9 +20,23 @@
             <li>
                 <button type="submit">Login</button>
             </li>
-
-
         </ul>
     </form>
+
+    <form action="" method="post">
+        <textarea name="content" cols="30" rows="10" class="@hasError('content')"></textarea><br>
+        @getError('content')
+        <button type="submit">Send</button>
+    </form>
+
+    <ul>
+        @foreach($posts as $post)
+            <li>
+                #{{ $post->id }} <br>
+                {{ $post->content }} <br>
+                Added by: {{ $post->user->name }}
+            </li>
+        @endforeach
+    </ul>
 @endsection
 
