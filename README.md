@@ -3,7 +3,7 @@
 - [x] Route Structure
 - [x] Template Engine
 - [x] Form Validation
-- [ ] Show Error Detail
+- [x] Show Error Detail
 - [ ] Global Settings
 - [ ] Database
 - [ ] Date Operations

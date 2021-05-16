@@ -10,7 +10,8 @@
     "require": {
         "izniburak/router": "^2.3",
         "jenssegers/blade": "^1.4",
-        "vlucas/valitron": "^1.4"
+        "vlucas/valitron": "^1.4",
+        "filp/whoops": "^2.12"
     },
     "autoload": {
         "psr-4": {
