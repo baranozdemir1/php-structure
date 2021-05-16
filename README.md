@@ -2,7 +2,7 @@
 
 - [x] Route Structure
 - [x] Template Engine
-- [ ] Validation
+- [x] Form Validation
 - [ ] Show Error Detail
 - [ ] Global Settings
 - [ ] Database
@@ -34,7 +34,7 @@ That's it! You can now create a database and write code!
 
 - [x] for Route Structure --> [izniburak/php-router](https://github.com/izniburak/php-router)
 - [x] for Template Engine --> [jenssegers/blade](https://github.com/jenssegers/blade)
-- [x] for Validation --> [vlucas/valitron](https://github.com/vlucas/valitron)
+- [x] for Form Validation --> [vlucas/valitron](https://github.com/vlucas/valitron)
 - [x] for Show Error Detail --> [filp/whoops](https://github.com/filp/whoops)
 - [x] for Global Settings --> [arrilot/dotenv-php](https://github.com/arrilot/dotenv-php)
 - [x] for Database --> [illuminate/database](https://github.com/illuminate/database)
