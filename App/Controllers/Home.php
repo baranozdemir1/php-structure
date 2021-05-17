@@ -59,13 +59,4 @@ class Home extends Controller
         return $this->view('home', compact('posts'));
     }
 
-    public function dates()
-    {
-        $periods = Carbon::parse('2021-05-20')
-            ->daysUntil('2021-05-25', 1);
-        foreach ($periods as $period) {
-            echo $period->toIso8601String() . '<br>';
-        }
-    }
-
 }
