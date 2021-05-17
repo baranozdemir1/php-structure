@@ -3,6 +3,7 @@
 namespace Core;
 
 use Buki\Router\Router;
+use Carbon\Carbon;
 use Dotenv\Dotenv;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Valitron\Validator;
@@ -40,6 +41,8 @@ class Bootstrap
             $whoops->register();
         }
 
+        Carbon::setLocale(config('APP_LOCALE'));
+
         /*
          * database install
          */
@@ -71,7 +74,7 @@ class Bootstrap
         ]);
         $this->validator = new Validator($_POST);
         Validator::langDir(dirname(__DIR__) . '/Public/lang');
-        Validator::lang('tr_TR');
+        Validator::lang(config('APP_LOCALE'));
         $this->view = new View($this->validator);
     }
 

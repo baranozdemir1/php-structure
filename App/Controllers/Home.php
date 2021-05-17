@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Middlewares\CheckAuth;
 use App\Models\Post;
 use App\Models\User;
+use Carbon\Carbon;
 use Core\Controller;
 use Illuminate\Database\Capsule\Manager;
 use Symfony\Component\HttpFoundation\Request;
@@ -56,6 +57,15 @@ class Home extends Controller
         $posts = Post::all();
 
         return $this->view('home', compact('posts'));
+    }
+
+    public function dates()
+    {
+        $periods = Carbon::parse('2021-05-20')
+            ->daysUntil('2021-05-25', 1);
+        foreach ($periods as $period) {
+            echo $period->toIso8601String() . '<br>';
+        }
     }
 
 }

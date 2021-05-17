@@ -13,7 +13,8 @@
         "vlucas/valitron": "^1.4",
         "filp/whoops": "^2.12",
         "vlucas/phpdotenv": "^5.3",
-        "illuminate/database": "^8.41"
+        "illuminate/database": "^8.41",
+        "nesbot/carbon": "^2.48"
     },
     "autoload": {
         "psr-4": {

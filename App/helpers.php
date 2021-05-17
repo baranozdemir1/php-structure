@@ -1,6 +1,7 @@
 <?php
 
-function config($key){
+function config($key): mixed
+{
 
 //    if (!empty($_ENV[$key])) {
 //        $data = $_ENV[$key];
@@ -11,4 +12,9 @@ function config($key){
 //    $data = isset($_ENV[$key]) ?? $_ENV[$key] ? : $default;
 
     return $_ENV[$key];
+}
+
+function timeAgo($date): string
+{
+    return \Carbon\Carbon::parse($date)->diffForHumans();
 }

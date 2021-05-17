@@ -6,7 +6,7 @@
 - [x] Show Error Detail
 - [x] .env Global Settings
 - [x] Database
-- [ ] Date Operations
+- [x] Date Operations
 - [ ] Auth
 - [ ] File and Pictures Upload
 

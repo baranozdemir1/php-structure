@@ -37,6 +37,10 @@ class View
             return '<?=$_posts[' . $name . '] ?? null ?>';
         });
 
+        $blade->directive('timeAgo', function ($date){
+            return '<?=timeAgo(' . $date . ')?>';
+        });
+
         return $blade->render($view, $data);
     }
 

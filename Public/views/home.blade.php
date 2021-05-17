@@ -34,7 +34,8 @@
             <li>
                 #{{ $post->id }} <br>
                 {{ $post->content }} <br>
-                Added by: {{ $post->user->name }}
+                Added by: {{ $post->user->name }} <br>
+                Post Add Date: @timeAgo($post->created_at)
             </li>
         @endforeach
     </ul>

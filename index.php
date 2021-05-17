@@ -7,6 +7,8 @@ require __DIR__ . '/vendor/autoload.php';
 
 $app = new \Core\Bootstrap();
 
+date_default_timezone_set(config('APP_TIMEZONE'));
+
 require __DIR__ . '/App/route.php';
 
 $app->run();
