@@ -14,7 +14,8 @@
         "filp/whoops": "^2.12",
         "vlucas/phpdotenv": "^5.3",
         "illuminate/database": "^8.41",
-        "nesbot/carbon": "^2.48"
+        "nesbot/carbon": "^2.48",
+        "aura/session": "^2.1"
     },
     "autoload": {
         "psr-4": {

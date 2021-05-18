@@ -21,6 +21,8 @@
 <body>
 
 <main>
+    @getError('error')
+
     @yield('content')
 </main>
 

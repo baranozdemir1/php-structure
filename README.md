@@ -7,7 +7,7 @@
 - [x] .env Global Settings
 - [x] Database
 - [x] Date Operations
-- [ ] Auth
+- [x] Auth
 - [ ] File and Pictures Upload
 
 Note: Not finished, yet.

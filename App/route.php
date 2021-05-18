@@ -4,6 +4,10 @@ global $app;
 
 $app->router->controller('/', 'Home');
 
+$app->router->any('/login', 'Auth@login', ['before' => 'CheckAuth']);
+$app->router->any('/register', 'Auth@register', ['before' => 'CheckAuth']);
+$app->router->get('/logout', 'Auth@logout');
+
 $app->router->get('/user/:slug?/:id?', function ($user = null, $id = null){
     return 'user page ' . $user . ' ' . $id;
 });

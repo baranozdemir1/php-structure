@@ -3,6 +3,18 @@
 @section('title', 'HomePage')
 
 @section('content')
+
+    @auth
+        <h3>Hoşgeldin, {{ auth()->getName() }}</h3>
+        <a href="http://localhost:8888/structure/logout">Logout</a>
+    @endauth
+
+    @guest
+        <h3>Hoşgeldin, ziyaretçi</h3>
+        <a href="http://localhost:8888/structure/login">Login</a>
+        <a href="http://localhost:8888/structure/register">Register</a>
+    @endguest
+
     <form action="" style="display: none" method="post">
         <ul>
             <li>
@@ -23,11 +35,13 @@
         </ul>
     </form>
 
+    @auth
     <form action="" method="post">
         <textarea name="content" cols="30" rows="10" class="@hasError('content')"></textarea><br>
         @getError('content')
         <button type="submit">Send</button>
     </form>
+    @endauth
 
     <ul>
         @foreach($posts as $post)

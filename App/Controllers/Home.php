@@ -12,10 +12,10 @@ use Symfony\Component\HttpFoundation\Request;
 
 class Home extends Controller
 {
-
-    public array $middlewareBefore = [
-        CheckAuth::class
-    ];
+//
+//    public array $middlewareBefore = [
+//        CheckAuth::class
+//    ];
 
     public function main(Request $request): string
     {
@@ -40,7 +40,7 @@ class Home extends Controller
             ]);
             if ($this->validator->validate()){
                 $data = $this->validator->data();
-                $data['user_id'] = 2;
+                $data['user_id'] = auth()->getId();
                 Post::create($data);
             }
         }
@@ -54,6 +54,10 @@ class Home extends Controller
 //        $posts = Posts::all();
 //        $user = User::find(2);
 //        $posts = $user->posts;
+
+
+//        auth()->segment->set('username', 'Baran');
+
         $posts = Post::all();
 
         return $this->view('home', compact('posts'));
